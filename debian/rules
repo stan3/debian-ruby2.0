@@ -23,6 +23,7 @@ configure_options += --with-sitearchdir="/usr/local/lib/$(DEB_HOST_MULTIARCH)/si
 # the following are ignored by ./configure, but used by some extconf.rb scripts
 configure_options += --enable-ipv6
 configure_options += --with-dbm-type=gdbm_compat
+configure_options += --with-tclConfig-dir=/usr/lib/$(DEB_HOST_MULTIARCH) --with-tkConfig-dir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
 # hardening and other standard Debian build flags
 configure_options += $(shell dpkg-buildflags --export=configure)
